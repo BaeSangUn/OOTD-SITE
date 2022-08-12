@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import "../Styles/FavoritCheck.scss";
+import {AiOutlineHeart, AiFillHeart} from "react-icons/ai";
 
-import {AiOutlineStar, AiFillStar} from "react-icons/ai";
-
-const StarCheck = () => {
+const FavoritCheck = () => {
     const [checked,setChecked] = useState(false);
     const onClick = () =>{
         
@@ -15,9 +15,9 @@ const StarCheck = () => {
     }
     return(
         <div>
-           {checked ? <AiFillStar className="star1 addi" onClick={onClick}/>:<AiOutlineStar className="star1 addi"onClick={onClick}/>}
+           {checked ? <AiOutlineHeart className="voidheart hrt-btn" onClick={onClick}/>:<AiFillHeart className="fullheart hrt-btn"onClick={onClick}/>}
         </div>
     );
 }
 
-export default StarCheck;
+export default FavoritCheck;

@@ -1,19 +1,29 @@
 import React from 'react';
-
+import {BiWon} from "react-icons/bi";
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 import './App.scss';
-import StarCheck from './components/StarCheck';
+import FavoritCheck from './components/FavoritCheck';
+
 
 function App() {
   return (
     <div>
-      <div>
-        <div className='img-box con'>
-          <img src="https://i.picsum.photos/id/0/5616/3744.jpg?hmac=3GAAioiQziMGEtLbfrdbcoenXoWAW-zlyEAMkfEdBzQ" alt="" />
-          <div><StarCheck /></div>
+      <nav className='sell-btn'>
+        <button className='sell'>
+          구매하기 <BiWon/>
+          <a href="http://localhost:3000"></a> 
+        </button>
+        <div className='like-btn'>
+          <button className='like'>
+          <FavoritCheck />
+          </button>
         </div>
+      <div >
+      <button className="shopping-cart">
+      <AiOutlineShoppingCart/>
+      </button>
       </div>
-      
-      
+      </nav>
     </div>
   );
 }
